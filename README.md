@@ -47,14 +47,23 @@ b. columns: The columns accepts an array of objects with the model ColumnConfigu
   hideOverflow?: boolean;
   
   i. isHeaderHidden: This is a flag that determine if the header of a particular column should be hidden. if set to false for a specified column, the column header          will be hidden.
+  
   ii. name: This is the name of the key that maps to the key of from the API whole data should be rendered in the specified column.
+  
   iii. sort: This maps to the key on the api that we are sorting by. For example a column 'login' that needs to be sorted by 'login' items will have 'login' supplied         to this field.
+  
   iv. label: This is the label that would be supplied to the header. You might want to value passed to it as the same as that passed to the name key above. However in       cases like where they key has an underscore like the avatar_url you might want to pass on 'avatar url' or any descriptive text as the case may be.
+  
   v. align: This is used to set how you want the column contents to be aligned. For this library, you can mainly align to either 'left', 'center' or 'right';
+  
   vi. padding: This is used to specify the padding of the content of the column.
+  
   vii. width: You can pass in fixed width in cases when you want a column to take a particular with. You either specify a number or string. for example (10 or 10%);
+  
   viii. preserveWhitespace: Pass true if you want the preserveWhitespace feature on the column.
+  
   ix. sortable: This determines if the column is sortable or not. for this exercise, sortable is set to true for login, avatar_url and type.
+  
   x. hideOverflow: If set to true hides overflow on the table.
   
 -------------------------  
@@ -70,6 +79,7 @@ Below are the @Output paramaters:
 # PAGINATION:
 Below are the @Input paramaters to get the Table pagination up and running:
  1. items: This is the data passed in number 3 above to the results table.
+ 
  2. pageSize: This is the size of the items currently rendered on the page. For this exercise, 9 is passed on and it is also defaulted to 9 for cases when no specified page size was specified. 
 
 Below are the @Output paramaters:
