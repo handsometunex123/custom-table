@@ -1,0 +1,12 @@
+<ng-container *ngIf="notification$ | async as notification">
+    <div id="notification-container" class="notification-container" *ngIf="notification.message">
+        <div id="notification-container-header" class="notification-container-header">
+            <i id="fa-bell" class="fa fa-bell"></i>
+            <span id="notification">NOTIFICATION</span>
+        </div>
+        <div id="notification-container-content" class="notification-container-content">
+            <p id="notification-content">{{notification.message}}</p>
+        </div>
+        <i id="close-icon" class="fa fa-times close-icon" (click)="closeNotification()"></i>
+    </div>
+</ng-container>

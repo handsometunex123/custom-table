@@ -1,0 +1,17 @@
+<div id="cell" class="cell"
+     [class.is-first-child]="index === 0"
+     [class.is-last-child]="index+1 === count"
+     [class.is-sortable]="config.sortable"
+     [ngClass]="[config.align ? config.align : '']"
+     [ngStyle]="{width: widthStyling}"
+>
+    <span id="column-header-label" *ngIf="!config.isHeaderHidden; else emptyHeader">
+      {{ config.label | titlecase }}
+      <i id="sort-asc-icon" class="fa fa-caret-up" *ngIf="config.sortable && sortDirection === 'asc'"></i>
+      <i id="sort-desc-icon" class="fa fa-caret-down" *ngIf="config.sortable && sortDirection === 'desc'"></i>
+    </span>
+</div>
+
+<ng-template #emptyHeader>
+  <span id="empty-column-header-label"></span>
+</ng-template>

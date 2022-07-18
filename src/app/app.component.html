@@ -1,0 +1,10 @@
+<div class="main">
+    <scalio-search id="scalio-search" [placeholder]="'Login'" (searchStringEvent)="getSearchString($event)"></scalio-search>
+    <scalio-results id="scalio-results" #dataTable [processType]="'client'" [isLoading]="isLoading" [data]="users" [searchInput]="searchString" [config]="config"></scalio-results>
+    
+    <div id="loading" class="loading" *ngIf="showLoadingScreen">
+        <scalio-loader></scalio-loader>
+    </div>
+    <scalio-notification id="notication" class="notification"></scalio-notification>
+</div>
+

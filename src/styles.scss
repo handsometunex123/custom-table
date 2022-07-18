@@ -1,0 +1,86 @@
+/* You can add global styles to this file, and also import other style files */
+
+:root {
+  --color-scalio-primary-main: #155580;
+  --color-scalio-light-grey: #efefef;
+  --color-scalio-deep-grey: #5f6871;
+  --color-scalio-mild-grey: #e8ebed;
+  --color-scalio-very-light-grey: #f8f8fa;
+  --color-scalio-light-blue: #d1e0ea;
+  --color-scalio-very-mild-blue: #14aacf11;
+  --color-scalio-mild-blue: #9dc5e21c;
+  --color-scalio-milder-blue: #323232;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 1rem = 10px, 10px/16px = 62.5%
+}
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+
+  /* Works on Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: var(--color-scalio-mild-grey)
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: var(----color-scalio-deep-grey);
+    border-radius: 1rem;
+    border: 2px solid var(----color-scalio-deep-grey);;
+  }
+
+  table{
+    overflow: hidden;
+  }
+
+  button {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    outline: none;
+    font-size: 1rem;
+    padding: 0 1rem;
+    height: 3.4rem;
+    border: none;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    justify-content: center;
+    font-weight: 600;
+    border-radius: 3px;
+    letter-spacing: .4px;
+    min-width: 12rem;
+    text-transform: uppercase;
+    background-color: var(--color-scalio-primary-main);
+    color: #fff;
+    cursor: pointer;
+
+    @media only screen and (min-width: 992px) {
+      font-size: 1.2rem;
+    }
+
+    &:disabled{
+        background-color: var(--color-scalio-very-light-grey);
+        color: #999999;
+        cursor: default;
+        &:hover {
+            background-color: var(--color-scalio-very-light-grey);;            
+        }
+    }
+
+    &:hover {
+        background-color: var(--color-scalio-primary-main);
+    }
+  }
+}

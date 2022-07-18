@@ -1,0 +1,35 @@
+<ng-container *ngIf="data && data.length > 0; else noData">
+    <div id="scalio-table-wrapper" class="scalio-table-wrapper">
+        <table #table id="scalio-table" role="presentation">
+            <thead id="scalio-table-head">
+                <tr id="scalio-table-head-row">
+                    <scalio-header-cell id="scalio-header-cell-{{i}}" (click)="onHeaderClick(col)"
+                        *ngFor="let col of config.columns; let i = index; let c = count" [config]="col" [index]="i"
+                        [count]="c" [isTh]="true" [fWidth]="col.width ? col.width : undefined"
+                        [sortDirection]="currentSortColumn === col ? currentSort?.direction : undefined">
+                    </scalio-header-cell>
+                </tr>
+            </thead>
+            <tbody id="scalio-table-body">
+                <tr id="scalio-table-body-row-{{pagedIndex}}" *ngFor="let pagedData of paginatedData; let pagedIndex = index" >
+                    <scalio-data-cell id="scalio-data-cell-{{i}}" [config]="col" [data]="pagedData" [index]="i" [count]="c" [fWidth]="col.width ? col.width : undefined"
+                        *ngFor="let col of config.columns; let i = index; let c = count">
+                    </scalio-data-cell>
+                </tr>
+            </tbody>
+        </table>
+    </div>    
+    <scalio-pagination id="scalio-table-paginator" [items]="data" [pageSize]="pageSize" (changePage)="onChangePage($event)"></scalio-pagination>
+</ng-container>
+<ng-template #noData>
+    <div id="data-message" class="data-message" *ngIf="!isLoading">
+        <ng-container *ngIf="searchInput; else default">
+            <span id="search-not-found" class="search-not-found">
+                No user matches the user login "<span class="data-message-input"> {{ searchInput }}</span>". Please change your search term and try again.
+            </span>            
+        </ng-container>
+        <ng-template #default>
+            <span id="no-users">No users</span>
+        </ng-template>        
+    </div>
+</ng-template>

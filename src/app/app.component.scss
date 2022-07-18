@@ -1,0 +1,38 @@
+:host {
+  .main {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem 3rem;
+
+    @media only screen and (min-width: 992px) {
+      padding: 5rem 10rem;
+    }
+  }
+  .loading {
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    opacity: 0.3;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    &.is-hidden {
+      display: none;
+    }
+  }
+
+  .notification {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    top: 0;
+    right: 0;
+  }
+}

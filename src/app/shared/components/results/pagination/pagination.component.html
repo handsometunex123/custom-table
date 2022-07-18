@@ -1,0 +1,18 @@
+<div id="pagination" class="pagination">
+    <button id="first-page-button" [disabled]="pager.currentPage === 1" (click)="setPage(1)">
+        <i class="fa fa-angle-double-left"></i>
+         <span>FIRST PAGE</span>  
+    </button>
+    <button id="previous-button" [disabled]="pager.currentPage === 1" (click)="setPage(pager.currentPage - 1)">
+        <i class="fa fa-angle-left"></i>
+        <span>PREVIOUS {{pageSize}} USERS</span>
+    </button>
+    <button id="next-button" [disabled]="pager.currentPage === pager.totalPages" (click)="setPage(pager.currentPage + 1)">
+        <span>NEXT {{pageSize}} USERS</span>
+        <i class="fa fa-angle-right"></i>
+    </button>
+    <button id="last-page-button" [disabled]="pager.currentPage === pager.totalPages" (click)="setPage(pager.totalPages)">
+        <span>LAST PAGE</span>
+        <i class="fa fa-angle-double-right"></i>
+    </button>    
+</div>

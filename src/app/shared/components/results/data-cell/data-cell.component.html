@@ -1,0 +1,8 @@
+<div id="cell" class="cell" 
+   [class.is-first-child]="index === 0" 
+   [class.is-last-child]="index+1 === count"
+   [class.hide-overflow]="config.hideOverflow"
+   [ngClass]="[config.align ? config.align : '', config.padding ? config.padding : '']"
+   [ngStyle]="{width: isPercent ? 'auto' : widthStyling}">
+
+<span id="value" class="value" [class.preserve-whitespace]="config.preserveWhitespace">{{data}}</span>

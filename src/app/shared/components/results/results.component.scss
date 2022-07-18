@@ -1,0 +1,66 @@
+:host {
+  width: 100%;
+  display: block;
+  position: relative;
+  z-index: 0;
+
+  .scalio-table-wrapper {
+    overflow-x: auto; 
+    // margin-bottom: 1rem;
+    min-height: calc(100vh - 38rem);
+  }
+
+  table {
+    width: 100%;
+    overflow: auto;
+    color: black;
+    position: relative;
+
+    thead {
+        tr {
+            color: white;
+            height: 2rem;
+            background-color: var(--color-scalio-primary-main);;
+            margin-bottom: 0.5rem;
+        }
+    }
+
+    tbody {
+        tr{
+            height: 2.5rem;
+            &:hover {
+                background-color: var(--color-scalio-very-mild-blue);
+            }
+            &:nth-child(odd) {
+                background-color: var(--color-scalio-mild-blue)  
+            }
+        }
+    }
+  }
+
+  .data-message {
+    background-color: var(--color-scalio-light-grey);
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .search-not-found{
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &-input {
+      color: var(--color-scalio-primary-main);
+      font-weight: bold;
+    }
+
+    span {
+      display: flex;
+      align-items: center;
+      opacity: 0.8;
+    }
+  }
+}

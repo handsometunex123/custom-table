@@ -1,0 +1,58 @@
+:host {
+  display: table-cell;
+  vertical-align: middle;
+  position: relative;
+
+  .cell {
+    display: flex;
+    align-items: center;
+    height: auto;
+    width: auto;
+    padding: 1.5rem;
+    position: relative;
+    font-size: 1.3rem;
+    cursor: default;
+
+    &.padding-1rem {
+      padding: 1rem 1.5rem;
+    }
+
+    &.is-first-child {
+      padding-left: 3rem;
+    }
+
+    &.is-last-child {
+      padding-right: 2rem;
+    }
+
+    &.center {
+      text-align: center;
+      justify-content: center;
+    }
+
+    &.right {
+      text-align: right;
+      justify-content: flex-end;
+    }
+
+    span {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      line-height: 1.2;
+
+      &.preserve-whitespace {
+        white-space: pre;
+      }
+    }
+
+    &.hide-overflow {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      text-overflow: ellipsis;
+    }
+  }
+}

@@ -1,0 +1,4 @@
+<div id="search" class="search">
+       <input id="search-input" class="search-input" #searchInput (keydown.enter)="submitSearch()" type="text" autofocus [placeholder]="placeholder" [style.text-align]="textAlign" [(ngModel)]="currentTextValue" />
+       <button id="submit-button" type="submit" (click)="submitSearch()">Submit</button>
+</div>
