@@ -4,7 +4,7 @@ Custom library handle array of objects
 This readme comprehensively states the capabilities and constraints of the scal.io table library
 
 Note: 
-1. This library contains about 78 functional unit test.
+1. This library contains about 83 functional unit test which covered all the components, services and interceptors.
 2. This library is built to be easily extensible(The Results Table and Search Component was created in the shared module so they can easily be imported any module in the future that needs them).
 3. The library is fairly responsive. As it allows horizontal scrolling in a case where the table width overflows.
 4. The library adopts http error interceptors for handling errors, appending the base url from the environment to the base of any api call that needs it and also for triggering and stopping the loader component of the application. 
