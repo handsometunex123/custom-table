@@ -13,8 +13,8 @@ Note:
 
 
 -----------------------------------
-# RESULTS TABLE
-# Below are the @Input paramaters to get the Results Table up and running:
+# RESULTS TABLE COMPONENT
+Below are the @Input paramaters to get the Results Table up and running:
 1. processType - This represent how we want the table operations to be carried out either from the client side or the server side. For example, for this exercise the processType is specified as client since the sort and paginating will be done from the client side. Note: In a case where this input is not provided, the default 'client' is used. In the future we might want to implement the server side pagination then that will be incorporated seamlessly.
 
 2. isLoading - This flag helps to inform the result component that data is currently been loaded into the application. This flag is set to true immediately after the submit button is clicked and set back to false as soon as data from back from the api call.
@@ -28,7 +28,8 @@ Note:
 -----------------
 The configuration that will be passed on to no 7 above is detailed below:
 
-# Table configuration : The library has a ResultsTableConfiguration model that specifies the model of the data that should be passed on as an input into the table. The ResultsTableConfiguration consist of two keys (defaultSort and columns).
+# Table configuration:
+The library has a ResultsTableConfiguration model that specifies the model of the data that should be passed on as an input into the table. The ResultsTableConfiguration consist of two keys (defaultSort and columns).
 
 a. defaultSort: This determines which column on the table should be sorted by default. The defaultSort is an object that consists of the name of the column to be sorted and the sort direction. the sort direction can eithe be 'asc' for ascending order sorting or 'desc' for descending order sorting. For this exercise defaultSort: {name: 'login', sortDirection: 'asc'} was used because the requirement was that on load of the table, the table should be sorted by the login column. In a case where the requirement wants us to specify descending order as the default for the login column, 'desc' is used. If for example, avatar_url is specified in the future to be the default sort column for the table all that we have to do is just update the defaultSort name to 'avatar_url'.
 
@@ -57,22 +58,22 @@ b. columns: The columns accepts an array of objects with the model ColumnConfigu
   x. hideOverflow: If set to true hides overflow on the table.
   
 -------------------------  
-#SEARCH COMPONENT:
-# Below are the @Input paramaters to get the search up and running:
-1. placeholder: This is the place holder text that should be displayed within the input field.
+# SEARCH COMPONENT:
+Below are the @Input paramaters to get the search up and running:
+  1. placeholder: This is the place holder text that should be displayed within the input field.
 
-# Below are the @Output paramaters:
-1. searchStringEvent: This emits whats the search string typed in by the user on click of the submit button.
+Below are the @Output paramaters:
+  1. searchStringEvent: This emits whats the search string typed in by the user on click of the submit button.
 
 
 ------------------------- 
-#PAGINATOR:
-# Below are the @Input paramaters to get the Table pagination up and running:
+# PAGINATION:
+Below are the @Input paramaters to get the Table pagination up and running:
  1. items: This is the data passed in number 3 above to the results table.
  2. pageSize: This is the size of the items currently rendered on the page. For this exercise, 9 is passed on and it is also defaulted to 9 for cases when no specified page size was specified. 
 
-# Below are the @Output paramaters:
-1. changePage: This emits the chunk of data within the list that should be rendered on the page.
+Below are the @Output paramaters:
+  1. changePage: This emits the chunk of data within the list that should be rendered on the page.
 
 
 
