@@ -76,7 +76,8 @@ Below are the @Output paramaters:
 
 
 ------------------------- 
-# PAGINATION:
+# EXTRA COMPONENTS:
+# Pagination Component
 Below are the @Input paramaters to get the Table pagination up and running:
  1. items: This is the data passed in number 3 above to the results table.
  
@@ -84,6 +85,15 @@ Below are the @Input paramaters to get the Table pagination up and running:
 
 Below are the @Output paramaters:
   1. changePage: This emits the chunk of data within the list that should be rendered on the page.
+
+# Notification Component
+ - Displays the user notification. For example, cases where there is an error from the API, the error is passed on via a subject to the component to be notify the user. The notification closes by default after the specified duration to seconds is reached. The notification component can also be closed by clicking on the cancel icon on the far top right of the component.
+
+# Loader Component.
+ - Displayed mainly when an API call is made to the backend service. It is triggered by the loader interceptor when the API request is started and closed when the api request is completed and response is returned.
+
+
+
 
 
 
