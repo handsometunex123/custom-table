@@ -68,7 +68,7 @@ b. columns: The columns accepts an array of objects with the model ColumnConfigu
   
 -------------------------  
 # SEARCH COMPONENT:
-Below are the @Input paramaters to get the search up and running:
+Below is the @Input paramaters to get the search up and running:
   1. placeholder: This is the place holder text that should be displayed within the input field.
 
 Below are the @Output paramaters:
