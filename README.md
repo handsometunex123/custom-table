@@ -1,4 +1,4 @@
-# scalioTableLibrary
+# fully customizable library
 Custom library handle array of objects
 
 This readme comprehensively states the capabilities and constraints of the scal.io table library
